@@ -1,0 +1,10 @@
+html {
+  box-sizing: border-box;
+  background-image: url("./currencyCalculatorBackground4.jpg");
+  background-size: 100%; 
+}
+
+*,
+::after, ::before {
+  box-sizing: inherit;
+}
