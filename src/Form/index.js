@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import Span from "../Span";
-import Result from "../Result";
-import { currencies } from "../currencies";
+import Span from "./Span";
+import Result from "./Result";
+import { currencies } from "./currencies";
 import "./index.css";
 
 const Form = () => {
-    const [moneyHeld, setMoneyHeld] = useState(1);
+    const [moneyHeld, setMoneyHeld] = useState("");
     const [currencyHeld, setCurrencyHeld] = useState(currencies[0].id);
     const [currencyWanted, setCurrencyWanted] = useState(currencies[0].id);
-    const [result, setResult] = useState(1);
+    const [result, setResult] = useState();
 
     const onSetCurrencyHeld = ({ target }) => setCurrencyHeld(target.value);
     const onSetCurrencyWanted = ({ target }) => setCurrencyWanted(target.value);
@@ -22,7 +22,7 @@ const Form = () => {
                 currencyHeld: currencyHeld,
                 cHeldRatio: currencyHeldRatio,
                 cWantedRatio: currencyWantedRatio,
-                mHeld: moneyHeld,
+                mHeld: +moneyHeld,
                 cWanted: currencyWanted,
                 resultCalc: moneyHeld * currencyHeldRatio / currencyWantedRatio,
             });
@@ -57,14 +57,14 @@ const Form = () => {
                     <Span text="do you have :" />
                     <input
                         type="number"
-                        value={moneyHeld}
+                        value={moneyHeld} 
                         onChange={({ target }) => setMoneyHeld(target.value)}
                         className="form__input"
                         min="0"
                         step="0.01"
                         required
                         placeholder="Write here..." />
-                    <Span text="Choose the currency you want : &nbsp;" />
+                    <Span text="Choose the currency you want &nbsp;:&nbsp; " />
                     <select
                         value={currencyWanted}
                         onChange={onSetCurrencyWanted}
