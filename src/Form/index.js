@@ -83,14 +83,12 @@ const Form = () => {
 
                 </label>
             </fieldset>
-            <div className="form__buttonDiv">
-                <button
-                    className="form__button"
-                    onClick={() => getResult(currencies, moneyHeld, currencyHeld, currencyWanted)}
-                >
-                    Calculate
-                </button>
-            </div>
+            <button
+                className="form__button"
+                onClick={() => getResult(currencies, moneyHeld, currencyHeld, currencyWanted)}
+            >
+                Calculate
+            </button>
         </form>
     )
 };
