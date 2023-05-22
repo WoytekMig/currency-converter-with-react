@@ -8,7 +8,7 @@ const Form = () => {
     const [moneyHeld, setMoneyHeld] = useState("");
     const [currencyHeld, setCurrencyHeld] = useState(currencies[0].id);
     const [currencyWanted, setCurrencyWanted] = useState(currencies[0].id);
-    const [result, setResult] = useState();
+    const [result, setResult] = useState(undefined);
 
     const onSetCurrencyHeld = ({ target }) => setCurrencyHeld(target.value);
     const onSetCurrencyWanted = ({ target }) => setCurrencyWanted(target.value);
@@ -20,10 +20,10 @@ const Form = () => {
         setResult(
             {
                 currencyHeld: currencyHeld,
-                cHeldRatio: currencyHeldRatio,
-                cWantedRatio: currencyWantedRatio,
-                mHeld: +moneyHeld,
-                cWanted: currencyWanted,
+                currencyHeldRatio: currencyHeldRatio,
+                currencyWantedRatio: currencyWantedRatio,
+                moneyHeld: +moneyHeld,
+                currencyWanted: currencyWanted,
                 resultCalc: moneyHeld * currencyHeldRatio / currencyWantedRatio,
             });
     };
@@ -35,8 +35,8 @@ const Form = () => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <fieldset className="form">
-                <legend className="form__legend">
+            <fieldset className="form__fieldset form__border">
+                <legend className="form__legend form__border">
                     Currency calculator
                 </legend>
                 <label>
@@ -57,7 +57,7 @@ const Form = () => {
                     <Span text="do you have :" />
                     <input
                         type="number"
-                        value={moneyHeld} 
+                        value={moneyHeld}
                         onChange={({ target }) => setMoneyHeld(target.value)}
                         className="form__input"
                         min="0"

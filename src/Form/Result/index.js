@@ -8,8 +8,8 @@ const Result = ({ result }) => (
             <>
                 <Span text="Your calculation will look like :&nbsp;" />
                 <strong className="form__result">
-                    {result.mHeld.toFixed(2)}&nbsp; {result.currencyHeld}&nbsp; {"= "}
-                    {result.resultCalc.toFixed(2)}&nbsp; {result.cWanted}
+                    {result.moneyHeld.toFixed(2)}&nbsp; {result.currencyHeld}&nbsp; {"= "}
+                    {result.resultCalc.toFixed(2)}&nbsp; {result.currencyWanted}
                 </strong>
             </>
         )}
