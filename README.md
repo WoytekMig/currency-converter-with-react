@@ -12,9 +12,9 @@ And also using BEM convention in :
 It is another exercise task during YouCode programmig course :) (My previous scopes are in my repository - please, check me! ;) )
 Here's a little demo : 
 
-![show](public/currencyConverter.gif)
+![show](public/currency-converter-react-v3.gif)
 
-Just like last time, the target was to rewrite code by using react.js :) 
+Just like last time, the target was to rewrite code by using react.js :) In the next step, I added a date and hour, by using useEffect and setInterval :) 
 
 
 
