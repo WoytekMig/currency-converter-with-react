@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Span from "./Span";
 import Result from "./Result";
-import DateAndHour from "./Date";
+import Clock from "./Clock";
 import { currencies } from "./currencies";
 import "./index.css";
 
@@ -41,7 +41,7 @@ const Form = () => {
                     Currency calculator
                 </legend>
                 <label>
-                    <DateAndHour />
+                    <Clock />
                     <Span text="Complete how much in  &nbsp;" />
                     <select
                         value={currencyHeld}

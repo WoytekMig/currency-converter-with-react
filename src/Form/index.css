@@ -53,9 +53,3 @@
 .form__button:active {
     background-color: hsl(48, 51%, 89%);
 }
-
-.form__date {
-    display: block;
-    font-size: x-small;
-    text-align: right;
-}

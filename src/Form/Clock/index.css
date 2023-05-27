@@ -1,5 +1,5 @@
-.form__date {
+.clock {
     display: block;
-    font-size: x-small;
+    font-size: small;
     text-align: right;
 }
