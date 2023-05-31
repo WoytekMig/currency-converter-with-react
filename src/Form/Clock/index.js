@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./index.css";
+import styled from "styled-components";
+
+const ClockStyle = styled.span`
+    display: block;
+    font-size: small;
+    text-align: right;
+`;
 
 const formattedDate = (currentDate) => (currentDate.toLocaleString("en", {
     weekday: "long",
@@ -25,9 +31,9 @@ const Clock = () => {
     }, []);
 
     return (
-        <span className="clock">
+        <ClockStyle>
             Today is  {formattedDate(currentDate)}
-        </span>
+        </ClockStyle>
     );
 };
 
