@@ -1,13 +1,18 @@
 import React from 'react';
 import Form from './Form';
-import './App.css';
+import styled from 'styled-components';
+
+const MainContainer = styled.div`
+    padding: 40px 20px;
+    font-family: 'Archivo Black', sans-serif;
+`;
 
 function App() {
 
   return (
-    <div className="mainContainer">
+    <MainContainer>
       <Form />
-    </div>
+    </MainContainer>
   );
 }
 
