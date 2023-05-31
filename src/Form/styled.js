@@ -1,41 +1,44 @@
-.form__fieldset {
+import styled from "styled-components";
+
+export const Fieldset = styled.fieldset`
     max-width: 650px;
     margin: auto;
     padding-top: 15px;
     padding-bottom: 20px;
     opacity: 0.7;
-}
-
-.form__legend {
-    font-size: x-large;
-    letter-spacing: 7px;
-    text-transform: uppercase;
-}
-
-.form__border {
     background-color: hsl(0, 0%, 100%);
+
+    border-style: double;
+    border-color: black;
+    border-radius: 6px;
+    border-width: 7px; 
+`;
+/* 
+export const Border = styled.border`
     border-style: double;
     border-color: black;
     border-radius: 6px;
     border-width: 7px;
-}
+`; */
 
-.form__text {
-    display: inline-block;
-    padding: 10px 0 10px 10px;
-}
+export const Legend = styled.legend`
+    font-size: x-large;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    background-color: hsl(0, 0%, 100%);
 
-.form__input {
+    border-style: double;
+    border-color: black;
+    border-radius: 6px;
+    border-width: 7px; 
+`;
+
+export const Input = styled.input`
     margin: 10px 0 10px 10px;
     width: 150px;
-}
+`;
 
-.form__result {
-    font-size: large;
-}
-
-.form__button {
-    
+export const Button = styled.button`
     border-radius: 6px;
     width: 100%;
     max-width: 650px;
@@ -44,12 +47,12 @@
     display: flex;
     justify-content: center;
     margin: 5px auto ;  
-}
 
-.form__button:hover {
+    &:hover {
     background-color: hsl(0, 3%, 19%);
-}
+    }
 
-.form__button:active {
+    &:active {
     background-color: hsl(48, 51%, 89%);
-}
+    }
+`;

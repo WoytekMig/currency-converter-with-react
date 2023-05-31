@@ -3,7 +3,7 @@ import Span from "./Span";
 import Result from "./Result";
 import Clock from "./Clock";
 import { currencies } from "./currencies";
-import "./index.css";
+import { Button, Fieldset, Input, Legend } from "./styled";
 
 const Form = () => {
     const [moneyHeld, setMoneyHeld] = useState("");
@@ -36,10 +36,10 @@ const Form = () => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset form__border">
-                <legend className="form__legend form__border">
+            <Fieldset>
+                <Legend>
                     Currency calculator
-                </legend>
+                </Legend>
                 <label>
                     <Clock />
                     <Span text="Complete how much in  &nbsp;" />
@@ -57,11 +57,10 @@ const Form = () => {
                         )))}
                     </select>
                     <Span text="do you have :" />
-                    <input
+                    <Input
                         type="number"
                         value={moneyHeld}
                         onChange={({ target }) => setMoneyHeld(target.value)}
-                        className="form__input"
                         min="0"
                         step="0.01"
                         required
@@ -84,13 +83,12 @@ const Form = () => {
                     <Result result={result} />
 
                 </label>
-            </fieldset>
-            <button
-                className="form__button"
+            </Fieldset>
+            <Button
                 onClick={() => getResult(currencies, moneyHeld, currencyHeld, currencyWanted)}
             >
                 Calculate
-            </button>
+            </Button>
         </form>
     )
 };
