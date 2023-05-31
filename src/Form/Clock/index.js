@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import { useCurrentDate } from "./useCurrentDate";
 
 const ClockStyle = styled.span`
     display: block;
@@ -7,7 +8,7 @@ const ClockStyle = styled.span`
     text-align: right;
 `;
 
-const formattedDate = (currentDate) => (currentDate.toLocaleString("en", {
+const formattedDate = (date) => (date.toLocaleString("en", {
     weekday: "long",
     day: "numeric",
     month: "long",
@@ -18,21 +19,11 @@ const formattedDate = (currentDate) => (currentDate.toLocaleString("en", {
 }));
 
 const Clock = () => {
-    const [currentDate, setCurrentDate] = useState(new Date());
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentDate(new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(timer);
-        };
-    }, []);
+    const date = useCurrentDate();
 
     return (
         <ClockStyle>
-            Today is  {formattedDate(currentDate)}
+            Today is  {formattedDate(date)}
         </ClockStyle>
     );
 };
