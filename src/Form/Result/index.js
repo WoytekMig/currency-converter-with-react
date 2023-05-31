@@ -1,5 +1,10 @@
 import React from "react";
 import Span from "../Span";
+import styled from "styled-components";
+
+const ResultStyle = styled.strong`
+    font-size: large;
+`;
 
 const Result = ({ result }) => (
 
@@ -7,10 +12,10 @@ const Result = ({ result }) => (
         {result !== undefined && (
             <>
                 <Span text="Your calculation will look like :&nbsp;" />
-                <strong className="form__result">
+                <ResultStyle>
                     {result.moneyHeld.toFixed(2)}&nbsp; {result.currencyHeld}&nbsp; {"= "}
                     {result.resultCalc.toFixed(2)}&nbsp; {result.currencyWanted}
-                </strong>
+                </ResultStyle>
             </>
         )}
     </div>
