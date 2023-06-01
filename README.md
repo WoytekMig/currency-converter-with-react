@@ -14,7 +14,7 @@ Here's a little demo :
 
 ![show](public/currency-converter-react-v3.gif)
 
-Just like last time, the target was to rewrite code by using react.js :) In the next step, I added a date and hour, by using useEffect and setInterval :) Then my code was improve by adding style-components. Recently, I created my first hook - useCurrentDate ;) 
+Just like last time, the target was to rewrite code by using react.js :) In the next step, I added a date and hour, by using useEffect and setInterval :) Then my code was improve by adding style-components(and GlobalStyle). Recently, I created my first hook - useCurrentDate ;) 
 
 
 # Getting Started with Create React App
