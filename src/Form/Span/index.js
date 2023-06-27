@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 const Text = styled.span`
     display: inline-block;
-    padding: 20px 0 20px 20px;
+    padding: 40px 0 20px 20px;
+    font-size: large;
 `;
 
 const Span = ({ text }) => (
