@@ -15,8 +15,8 @@ const Result = ({ result }) => (
         {result !== undefined && (
             <>
                 <ResultStyle>
-                    {result.moneyHeld.toFixed(2)}&nbsp; {result.currencyHeld} {" = "}
-                    {result.resultCalc.toFixed(2)}&nbsp; {result.currencyWanted}
+                    {result.moneyHeld.toFixed(2)}&nbsp;{result.currencyHeld} {" = "}
+                    {result.resultCalc.toFixed(2)}&nbsp;{result.currencyWanted}
                 </ResultStyle>
             </>
         )}
