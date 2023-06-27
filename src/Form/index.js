@@ -4,7 +4,7 @@ import Result from "./Result";
 import Clock from "./Clock";
 import { currencies } from "./currencies";
 import { Button, Fieldset, Input, Legend, Loading, LoadingBar, Failure, Source } from "./styled";
-import { useRatesData, requestURL } from "../useRatesData";
+import { useRatesData } from "../useRatesData";
 
 const Form = () => {
     const [moneyHeld, setMoneyHeld] = useState("");
@@ -91,7 +91,7 @@ const Form = () => {
                                         value={moneyHeld}
                                         onChange={({ target }) => {
                                             target.value >= 0 ? (setMoneyHeld(target.value))
-                                            : alert('We cannot exchange your debts ;)')
+                                                : alert('We cannot exchange your debts ;)')
                                         }}
                                         min="0"
                                         step="0.01"
